@@ -43,7 +43,6 @@
 
         </android.support.v7.widget.Toolbar>
         <include layout="@layout/main_content"/>
-
     </LinearLayout>
     <!-- The navigation drawer -->
     <FrameLayout
@@ -51,5 +50,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/white" />
+        android:background="@android:color/white" >
+        <ListView
+            android:id="@+id/topics_view"
+            android:divider="#000000"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:layout_margin="8dp"
+            android:background="#44000000"
+            android:onClick="closeDrawer"
+            android:src="@drawable/ic_close_white_24dp"/>
+    </FrameLayout>
 </android.support.v4.widget.DrawerLayout>
